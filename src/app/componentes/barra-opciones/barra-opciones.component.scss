@@ -1,0 +1,59 @@
+.main-div {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+
+}
+
+.name-div {
+
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.a-div {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navigation-a-div{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.navigation-a {
+
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+
+}
+
+.a-name {
+
+    color: black;
+    font-family: "Montserrat", sans-serif, bold;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+
+}
