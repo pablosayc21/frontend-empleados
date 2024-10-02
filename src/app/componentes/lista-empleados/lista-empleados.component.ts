@@ -6,6 +6,8 @@ import { Departamento } from 'src/app/modelos/departamento.mode';
 import { MessageService } from 'primeng/api';
 import { CompartirEmpleadoService } from 'src/app/servicios/compartir-empleado.service';
 import { Router } from '@angular/router';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-lista-empleados',
@@ -34,7 +36,14 @@ export class ListaEmpleadosComponent {
 
   ngOnInit(){
 
-    this.departamentoBS.listarDepartamentos().subscribe((response) => {
+    this.departamentoBS.listarDepartamentos().pipe(
+      catchError(() => {
+
+        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+
+        return of([]); 
+      })
+    ).subscribe((response) => {
 
       if('message' in response) {
 
@@ -54,11 +63,19 @@ export class ListaEmpleadosComponent {
 
     });
 
-    this.empleadoBS.listarEmpleados().subscribe((response) => {
+    this.empleadoBS.listarEmpleados().pipe(
+      catchError(() => {
+
+        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+
+        return of([]); 
+        
+      })
+    ).subscribe((response) => {
 
       if('message' in response) {
 
-        alert(response.message)
+        this.messageService.add({ severity: 'error', detail: response.message});
 
       } else {
 

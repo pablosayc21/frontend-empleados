@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Empleado, ErrorResponse, EmpleadoResponse } from '../modelos/empleado.model';
+import { Empleado, ErrorResponse, EmpleadoResponse, NuevoEmpleado } from '../modelos/empleado.model';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError} from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -35,7 +35,7 @@ export class BackendEmpleadoService {
 
   }
 
-  agregarEmpleado(empleado: Empleado): Observable<EmpleadoResponse | ErrorResponse> {
+  agregarEmpleado(empleado: NuevoEmpleado): Observable<EmpleadoResponse | ErrorResponse> {
 
     const url = BackEndApi + '/api/empleados'
 

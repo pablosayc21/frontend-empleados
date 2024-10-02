@@ -9,6 +9,16 @@ export interface Empleado {
 
 }
 
+export interface NuevoEmpleado {
+
+  nombre: string;
+  apellido: string;
+  cargo: string;
+  fecha_contratacion: string;
+  departamento_id: number;
+
+} 
+
 export interface EmpleadoResponse {
   message: string;
 }
