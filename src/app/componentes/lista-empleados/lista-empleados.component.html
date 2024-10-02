@@ -18,27 +18,27 @@
             <tr>
                 <th>
                     ID
-                    <p-columnFilter type="number" field="id" display="menu"></p-columnFilter>
+                    <p-columnFilter type="numeric" field="id" display="menu"></p-columnFilter>
                 </th>
                 <th>
                     Nombre
-                    <p-columnFilter type="text" field="name" display="menu"/>
+                    <p-columnFilter type="text" field="nombre" display="menu"/>
                 </th>
                 <th>
                     Apellido
-                    <p-columnFilter type="text" field="name" display="menu"/>
+                    <p-columnFilter type="text" field="apellido" display="menu"/>
                 </th>
                 <th>
                     Departamento
-                    <p-columnFilter type="text" field="name" display="menu"/>
+                    <p-columnFilter type="text" field="departamento_id" display="menu"/>
                 </th>
                 <th>
                     Cargo
-                    <p-columnFilter type="text" field="name" display="menu"/>
+                    <p-columnFilter type="text" field="cargo" display="menu"/>
                 </th>
                 <th>
                     Fecha de contratacion
-                    <p-columnFilter type="date" field="date" display="menu" />
+
                 </th>
                 <th>
                     
@@ -53,7 +53,7 @@
                 <td> {{empleado.id || '' }} </td>
                 <td> {{empleado.nombre || '' }} </td>
                 <td> {{empleado.apellido || ''}} </td>
-                <td> {{departamentoMap[empleado.departamento_id] || ''}} </td>
+                <td> {{empleado.departamento_id}}. {{ departamentoMap[empleado.departamento_id] || ''}} </td>
                 <td> {{empleado.cargo || ''}} </td>
                 <td> {{empleado.fecha_contratacion || ''}} </td>
                 <td> <p-button icon="pi pi-trash" styleClass="p-button-info mr-2" label="Editar" (click) = "editarEmpleado(empleado)"></p-button>  </td>

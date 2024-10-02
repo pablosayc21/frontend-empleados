@@ -14,6 +14,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ToastModule } from 'primeng/toast';
     MultiSelectModule,
     BrowserAnimationsModule,
     InputTextModule,
-    ToastModule
+    ToastModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
