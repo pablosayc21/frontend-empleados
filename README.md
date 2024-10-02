@@ -10,9 +10,9 @@ Código fuente para aplicación de gestión de empleados.
 
 ## Backend
 
-Para que la aplicación funcione debe instalar el backend en este [repositorio](https://github.com/pablosayc21/backend-empleados). 
+Para que la aplicación funcione, debe instalar el backend en este [repositorio](https://github.com/pablosayc21/backend-empleados). 
 
-## Guia de instalacion
+## Guía de instalación
 
 ```bash
 # 1. Instalar Angular CLI version 16.2.4 dlobalmente (Si no lo tenía previamente instalado)
@@ -34,7 +34,7 @@ npm start
 
 ## Ejecución
 
-Ejecuta `ng serve` para un servidor de desarrollo. Entra `http://localhost:4200/`. La aplicación se recargara automaticamente si hay algún cambio en los archivos.
+Ejecuta `ng serve` para un servidor de desarrollo. Entra `http://localhost:4200/`. La aplicación se recargará automáticamente si hay algún cambio en los archivos.
 
 ## Incluye
 
