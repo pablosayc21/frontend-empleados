@@ -1,1 +1,35 @@
-<p>editar-empleado works!</p>
+<p-toast/>
+
+<p-button icon="pi pi-trash" styleClass="p-button-info mr-2" label="Regresar" (click) = "regresar()" [style]="{'margin-left':'1rem'}"></p-button>
+
+<div class="fondo">
+
+    <form [formGroup]="formularioActualizarEmpleado" (ngSubmit)="actualizarEmpleado()">
+
+        <label for="nombre"> Nombre: </label>
+
+        <input id="nombre" type="text" pInputText formControlName="nombre">
+
+        <label for="apellido"> Apellido: </label>
+
+        <input id="apellido" type="text" pInputText formControlName="apellido" >
+
+        <label for="cargo"> Cargo: </label>
+
+        <input id="cargo" type="text" pInputText formControlName="cargo">
+
+        <label for="fecha_contratacion"> Fecha de contratación:  </label>
+
+        <p-calendar id = "fecha_contratacion" formControlName="fecha_contratacion" dateFormat="dd-mm-yy" [style]="{'width':'100%'}"/>
+
+        <label for="departamento"> Departamento: </label>
+
+        <p-dropdown formControlName="departamento_id" [options]="departamentos" id="departamento" optionLabel="nombre" placeholder="Selecciona un departamento" />
+
+        <button pButton pRipple [disabled]="!formularioActualizarEmpleado.valid"  label="Editar empleado" icon="pi pi-user" class="w-full"></button>
+
+    </form>
+
+
+
+</div>
