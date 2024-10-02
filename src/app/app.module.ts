@@ -9,7 +9,11 @@ import { ListaEmpleadosComponent } from './componentes/lista-empleados/lista-emp
 import { EditarEmpleadoComponent } from './componentes/editar-empleado/editar-empleado.component';
 import { AgregarEmpleadoComponent } from './componentes/agregar-empleado/agregar-empleado.component';
 import { TableModule } from 'primeng/table';
-
+import { ButtonModule } from 'primeng/button';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InputTextModule } from 'primeng/inputtext';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,12 @@ import { TableModule } from 'primeng/table';
     BrowserModule,
     AppRoutingModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule,
+    MultiSelectModule,
+    BrowserAnimationsModule,
+    InputTextModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

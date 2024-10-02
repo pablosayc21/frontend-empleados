@@ -4,7 +4,6 @@ import { Empleado, ErrorResponse, EmpleadoResponse } from '../modelos/empleado.m
 import { environment } from 'src/environments/environment';
 import { Observable, throwError} from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
 
 const BackEndApi = environment.urlBackend;
 
