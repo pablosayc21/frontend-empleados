@@ -17,12 +17,13 @@ import { of } from 'rxjs';
 })
 export class ListaEmpleadosComponent {
 
-  empleados!: Empleado[];
+  empleados!: Empleado[]
 
-  departamentos!: Departamento[];
+  departamentos!: Departamento[]
+
   departamentoMap: { [key: number]: string } = {}
 
-  loading: boolean = false;
+  loading: boolean = false
 
   constructor(private empleadoBS: BackendEmpleadoService, 
     private departamentoBS: BackendDepartamentosService, 
@@ -37,17 +38,19 @@ export class ListaEmpleadosComponent {
   ngOnInit(){
 
     this.departamentoBS.listarDepartamentos().pipe(
+
       catchError(() => {
 
-        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' })
 
-        return of([]); 
+        return of([])
+
       })
     ).subscribe((response) => {
 
       if('message' in response) {
 
-        this.messageService.add({ severity: 'danger', detail: response.message});
+        this.messageService.add({ severity: 'danger', detail: response.message})
 
       } else {
         
@@ -55,7 +58,7 @@ export class ListaEmpleadosComponent {
 
         this.departamentos.forEach(departamento => {
 
-          this.departamentoMap[departamento.id] = departamento.nombre;
+          this.departamentoMap[departamento.id] = departamento.nombre
 
         });
 
@@ -66,7 +69,7 @@ export class ListaEmpleadosComponent {
     this.empleadoBS.listarEmpleados().pipe(
       catchError(() => {
 
-        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' })
 
         return of([]); 
         
@@ -75,7 +78,7 @@ export class ListaEmpleadosComponent {
 
       if('message' in response) {
 
-        this.messageService.add({ severity: 'error', detail: response.message});
+        this.messageService.add({ severity: 'error', detail: response.message})
 
       } else {
 
@@ -93,7 +96,7 @@ export class ListaEmpleadosComponent {
 
       if(response.message === "Empleado eliminado.") {
 
-        this.empleados = this.empleados.filter(e => e.id !== empleado.id);
+        this.empleados = this.empleados.filter(e => e.id !== empleado.id)
 
         this.messageService.add({ severity: 'success', detail: response.message})
 

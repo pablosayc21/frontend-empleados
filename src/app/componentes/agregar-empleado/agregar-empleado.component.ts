@@ -17,9 +17,9 @@ import { of } from 'rxjs';
 })
 export class AgregarEmpleadoComponent {
 
-  departamentos!: Departamento[];
+  departamentos!: Departamento[]
 
-  formularioIngresoEmpleado:FormGroup;
+  formularioIngresoEmpleado:FormGroup
 
   constructor(private empleadosBS: BackendEmpleadoService, private departamentosBS: BackendDepartamentosService, private messageService: MessageService, private fb: FormBuilder){
 
@@ -40,7 +40,7 @@ export class AgregarEmpleadoComponent {
     this.departamentosBS.listarDepartamentos().pipe(
       catchError(() => {
 
-        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+        this.messageService.add({severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' })
 
         return of([]); 
         
@@ -51,7 +51,7 @@ export class AgregarEmpleadoComponent {
 
       if('message' in response) {
 
-        this.messageService.add({ severity: 'danger', detail: response.message});
+        this.messageService.add({ severity: 'danger', detail: response.message})
 
       } else {
         
@@ -67,23 +67,23 @@ export class AgregarEmpleadoComponent {
 
     const nuevoEmpleado:NuevoEmpleado = this.formularioIngresoEmpleado.value;
 
-    nuevoEmpleado.departamento_id = this.formularioIngresoEmpleado.controls['departamento_id'].value.id;
+    nuevoEmpleado.departamento_id = this.formularioIngresoEmpleado.controls['departamento_id'].value.id
 
-    const fechaContratacion = this.formularioIngresoEmpleado.controls['fecha_contratacion'].value;
+    const fechaContratacion = this.formularioIngresoEmpleado.controls['fecha_contratacion'].value
 
-    nuevoEmpleado.fecha_contratacion = formatDate(fechaContratacion, 'dd-MM-yyyy', 'en-US');
+    nuevoEmpleado.fecha_contratacion = formatDate(fechaContratacion, 'dd-MM-yyyy', 'en-US')
 
     this.empleadosBS.agregarEmpleado(nuevoEmpleado).subscribe((response) => {
 
       if(response.message === "Empleado agregado") {
 
-        this.messageService.add({ severity: 'success', detail: response.message});
+        this.messageService.add({ severity: 'success', detail: response.message})
 
         this.formularioIngresoEmpleado.reset()
 
       } else {
 
-        this.messageService.add({ severity: 'error', detail: response.message});
+        this.messageService.add({ severity: 'error', detail: response.message})
 
       }
 

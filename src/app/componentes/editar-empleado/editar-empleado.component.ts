@@ -18,11 +18,11 @@ import { CompartirEmpleadoService } from 'src/app/servicios/compartir-empleado.s
 })
 export class EditarEmpleadoComponent {
 
-  departamentos!: Departamento[];
+  departamentos!: Departamento[]
 
-  empleado: Empleado | undefined;
+  empleado: Empleado | undefined
 
-  formularioActualizarEmpleado:FormGroup;
+  formularioActualizarEmpleado:FormGroup
 
   constructor(private router: Router, private fb: FormBuilder, private empleadosBS: BackendEmpleadoService, private departamentosBS: BackendDepartamentosService, private messageService: MessageService ,private usuarioCompartidoS: CompartirEmpleadoService){
 
@@ -43,7 +43,7 @@ export class EditarEmpleadoComponent {
     this.departamentosBS.listarDepartamentos().pipe(
       catchError(() => {
 
-        this.messageService.add({ severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' });
+        this.messageService.add({ severity: 'error', detail: 'No se pudo conectar al servidor. Verifica tu conexión.' })
 
         return of([]);
 
@@ -53,7 +53,7 @@ export class EditarEmpleadoComponent {
 
         if ('message' in response) {
 
-          this.messageService.add({ severity: 'danger', detail: response.message });
+          this.messageService.add({ severity: 'danger', detail: response.message })
 
         } else {
 
@@ -94,7 +94,7 @@ export class EditarEmpleadoComponent {
 
   regresar(){
 
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/')
 
   }
 
@@ -111,17 +111,17 @@ export class EditarEmpleadoComponent {
 
       if(response.message === "Empleado actualizado") {
 
-        this.messageService.add({ severity: 'success', detail: response.message});
+        this.messageService.add({ severity: 'success', detail: response.message})
 
         this.regresar()
 
       } else {
 
-        this.messageService.add({ severity: 'error', detail: response.message});
+        this.messageService.add({ severity: 'error', detail: response.message})
 
       }
 
-    });
+    })
 
 
   }
