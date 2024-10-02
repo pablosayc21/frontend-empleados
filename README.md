@@ -1,27 +1,85 @@
 # FrontendEmpleados
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+Código fuente para aplicación de gestión de empleados.
 
-## Development server
+![Angular]
+![AngularCLI]
+![Primeng]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/principal.png" width = "100%" height = "auto"> </div>  </div>
 
-## Code scaffolding
+## Backend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para que la aplicación funcione debe instalar el backend en este [repositorio](https://github.com/pablosayc21/backend-empleados). 
 
-## Build
+## Guia de instalacion
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+# 1. Instalar Angular CLI version 16.2.4 dlobalmente (Si no lo tenía previamente instalado)
+npm install -g @angular/cli@16.2.4
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 2. Clonar el repositorio
+git clone https://github.com/pablosayc21/frontend-empleados.git
 
-## Running end-to-end tests
+# 4. Ingresar al directorio
+cd frontend-empleados
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# 5. Instalar el repositorio
+npm install
 
-## Further help
+# 6. Iniciar el servidor
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Ejecución
+
+Ejecuta `ng serve` para un servidor de desarrollo. Entra `http://localhost:4200/`. La aplicación se recargara automaticamente si hay algún cambio en los archivos.
+
+## Incluye
+
+> Dependencias
+- [x] Angular : 16.2.0
+- [x] Angular CLI : 16.2.4
+- [x] PrimeNG : 17.18.11
+- [x] RxJS : ~7.8.0
+- [x] TypeScript : ~5.1.3
+- [x] Zone.js : ~0.13.0
+
+> Funcionalidades
+- [x] Routing
+- [x] Lazy Loading
+- [x] Server Side Rendering (SSR)
+- [x] Progressive Web App (PWA)
+- [x] Responsive Layout
+- [x] Search Engine Optimization (SEO)
+- [x] Components
+- [x] Services
+- [x] Reactive Forms
+- [x] Template Driven Forms
+- [x] Search / Grid / Pagination
+
+
+## Reponsive
+
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r1.png" width = "100%" height = "auto"> </div>  </div>
+
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r2.png" width = "100%" height = "auto"> </div>  </div>
+
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r3.png" width = "100%" height = "auto"> </div>  </div>
+
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r4.png" width = "100%" height = "auto"> </div>  </div>
+
+## Autores
+* [Pablo Say](https://github.com/pablosayc21)
+
+## Contacto
+
+[Instagram](https://www.instagram.com/pablosc_21/) 
+
+[LinkedIn](https://www.linkedin.com/in/PabloSay21/)
+
+
+[Angular]:https://img.shields.io/badge/Angular%2016.2.4-gray?logo=angular
+[AngularCLI]:https://img.shields.io/badge/Angular%20CLI%2016.2.4-gray?logo=angular
+[Primeng]:https://img.shields.io/badge/primeng%2017.18.11-gray?logo=primeng
