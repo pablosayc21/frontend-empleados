@@ -6,7 +6,7 @@ Código fuente para aplicación de gestión de empleados.
 ![AngularCLI]
 ![Primeng]
 
-<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/principal.png" width = "100%" height = "auto"> </div>  </div>
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/principal.webp" width = "100%" height = "auto"> </div>  </div>
 
 ## Backend
 
@@ -62,13 +62,13 @@ Ejecuta `ng serve` para un servidor de desarrollo. Entra `http://localhost:4200/
 
 ## Reponsive
 
-<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r1.png" width = "100%" height = "auto"> </div>  </div>
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r1.webp" width = "100%" height = "auto"> </div>  </div>
 
-<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r2.png" width = "100%" height = "auto"> </div>  </div>
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r2.webp" width = "100%" height = "auto"> </div>  </div>
 
-<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r3.png" width = "100%" height = "auto"> </div>  </div>
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r3.webp" width = "100%" height = "auto"> </div>  </div>
 
-<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r4.png" width = "100%" height = "auto"> </div>  </div>
+<div align="center"> <div align = "center"> <img src = "src/assets/imagenes/r4.webp" width = "100%" height = "auto"> </div>  </div>
 
 ## Autores
 * [Pablo Say](https://github.com/pablosayc21)
